@@ -4,8 +4,9 @@
 
  1. clone projcet
  2. use node 20 version like 20.13.1(LTS) its not working node 20+ versions
- 3. npm i 
- 4. npm run start:dev // for starting project
+ 3. npm i
+ 4. create .env and add here DB_URL=
+ 5. npm run start:dev // for starting project
 
 ## How to add new resources?
 

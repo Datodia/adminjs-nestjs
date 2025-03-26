@@ -43,14 +43,19 @@ inject: [
 
 
 ``` ts
-  adminJsOptions: {
-    rootPath:  '/admin',
-    resources: [
-	    { resource:  adminModel },
-	    { resource:  userModel },
-	    { resource:  PostModel }, // add new models
-    ],
-    }
+  useFactory: (
+	adminModel: Model<Admin>,
+	userModel: Model<User>,
+	postModel: Mode<Post> // dont forget that
+	) => ({
+        adminJsOptions: {
+          rootPath: '/admin',
+          resources: [
+            { resource: adminModel },
+            { resource: userModel },
+          ],
+        },
+...
 ```
 
 9. thats all npm run start:dev /admin use username: admin@example.com and pass: password  
